@@ -7,22 +7,22 @@ GOTO :build
 
 :regular
 ECHO "Building regular64"
-cmake -DWithOpenSSL=ON -DWithSharedOpenSSL=OFF -H. -Bbuild  -G"Visual Studio 12 Win64"
+cmake -DWithOpenSSL=ON -DWithSharedOpenSSL=OFF -H. -Bbuild  -G"Visual Studio 10 Win64"
 GOTO :end
 
 :regular32
 ECHO "Building regular32"
-cmake -DWithOpenSSL=ON -DWithSharedOpenSSL=OFF -H. -Bbuild  -G"Visual Studio 12"
+cmake -DWithOpenSSL=ON -DWithSharedOpenSSL=OFF -H. -Bbuild  -G"Visual Studio 10"
 GOTO :end
 
 :tiny
 ECHO "Building tiny64"
-cmake -H. -Bbuild -G"Visual Studio 12 Win64"
+cmake -H. -Bbuild -G"Visual Studio 10 Win64"
 GOTO :end
 
 :tiny32
 ECHO "Building tiny32"
-cmake -H. -Bbuild -G"Visual Studio 12"
+cmake -H. -Bbuild -G"Visual Studio 10"
 GOTO :end
 
 :build
